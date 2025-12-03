@@ -11,3 +11,42 @@ Modellizzare la struttura di un database per memorizzare tutti i dati riguardant
 -ogni Studente può iscriversi a più appelli di Esame;
 
 per ogni appello d'Esame a cui lo Studente ha partecipato, è necessario memorizzare il voto ottenuto, anche se non sufficiente.
+
+## Dipartimento
+
+-ID_dipartimento (PK)
+-nome
+
+## CorsoDiLaurea
+
+-ID_CorsoLaurea (PK)
+-nome
+-ID_Dipartimento (FK)
+
+## Corso
+
+-ID_Corso (PK)
+-nome
+-cfu
+-ID_CorsoLaurea (FK)
+
+## Insegnante
+
+-ID_Insegnante (PK)
+-nome
+-cognome
+-email
+
+## AppelloEsame
+
+-ID_Appello (PK)
+-data
+-ID_Corso (FK)
+
+## Studente
+
+-Matricola (PK)
+-nome
+-cognome
+-data_nascita
+-ID_CorsoLaurea (FK)
