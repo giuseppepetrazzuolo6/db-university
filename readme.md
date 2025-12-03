@@ -45,8 +45,19 @@ per ogni appello d'Esame a cui lo Studente ha partecipato, è necessario memoriz
 
 ## Studente
 
--Matricola (PK)
+-ID_Matricola (PK)
 -nome
 -cognome
 -data_nascita
 -ID_CorsoLaurea (FK)
+
+## Pivot: Insegnamento
+
+-ID_Insegnante
+-ID_Corso
+
+## Pivot: Appelli_Studenti
+
+-ID_Matricola
+-ID_Appello
+-voto
