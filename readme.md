@@ -12,38 +12,39 @@ Modellizzare la struttura di un database per memorizzare tutti i dati riguardant
 
 per ogni appello d'Esame a cui lo Studente ha partecipato, è necessario memorizzare il voto ottenuto, anche se non sufficiente.
 
-## Dipartimento
+## Tabella: Dipartimento
 
 -ID_dipartimento (PK)
 -nome
+-indirizzo
 
-## CorsoDiLaurea
+## Tabella: CorsoDiLaurea
 
 -ID_CorsoLaurea (PK)
 -nome
 -ID_Dipartimento (FK)
 
-## Corso
+## Tabella: Corso
 
 -ID_Corso (PK)
 -nome
 -cfu
 -ID_CorsoLaurea (FK)
 
-## Insegnante
+## Tabella: Insegnante
 
 -ID_Insegnante (PK)
 -nome
 -cognome
 -email
 
-## AppelloEsame
+## Tabella: AppelloEsame
 
 -ID_Appello (PK)
 -data
 -ID_Corso (FK)
 
-## Studente
+## Tabella: Studente
 
 -ID_Matricola (PK)
 -nome
@@ -51,12 +52,12 @@ per ogni appello d'Esame a cui lo Studente ha partecipato, è necessario memoriz
 -data_nascita
 -ID_CorsoLaurea (FK)
 
-## Pivot: Insegnamento
+## Tabella pivot: Insegnanti_Corsi
 
 -ID_Insegnante
 -ID_Corso
 
-## Pivot: Appelli_Studenti
+## Tabella pivot: Appelli_Studenti
 
 -ID_Matricola
 -ID_Appello
