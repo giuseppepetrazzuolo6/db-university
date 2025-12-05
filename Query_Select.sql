@@ -46,15 +46,17 @@ WHERE `name` LIKE "%Magistrale%";
 
 # 7. Da quanti dipartimenti è composta l'università? (12)
 /*
-SELECT *
-FROM `departments`;
+SELECT COUNT(*) as `number_of_departments`
+FROM departments ;
 */
 
 # 8. Quanti sono gli insegnanti che non hanno un numero di telefono? (50)
 /*
-SELECT * 
+SELECT COUNT(*) as `teachers_without_phone`
 FROM `teachers`
-WHERE `phone` is NULL;
+WHERE `phone` IS NULL;
 */
+
+
 
 
